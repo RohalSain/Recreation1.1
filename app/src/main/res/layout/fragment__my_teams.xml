@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/BackgroundColor"
+    android:id="@+id/FragmentMyTeam"
+    tools:context="com.example.emilence.recreationcenter.Fragment_MyTeams">
+
+    <!-- TODO: Update blank fragment layout -->
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <android.support.v7.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:padding="10dp"
+      android:background="@android:color/white"
+
+      android:id="@+id/listMyTeams">
+
+  </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
+
+
+
+</RelativeLayout>

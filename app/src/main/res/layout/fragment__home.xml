@@ -1,0 +1,52 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundColor"
+    android:id="@+id/container"
+    tools:context="com.example.emilence.recreationcenter.Fragment_Home">
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container1">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/current">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/frame_Home"
+
+
+                >
+                <com.google.android.gms.maps.MapView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/map"
+                />
+            </FrameLayout>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/frame_Home"
+                        android:textSize="17dp"
+                        android:textColor="@android:color/white"
+                        android:text="Current Match"
+                        android:textAllCaps="false"
+                        android:id="@+id/currentMatch"
+                        android:layout_marginBottom="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@drawable/current_btn_bg"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

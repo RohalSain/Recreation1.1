@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.emilence.recreationcenter.Fragment_Team2">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/BackgroundColor"
+                >
+                <ImageButton
+                    android:id="@+id/Back_CurrentTeam2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="60dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="30dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_left_arrow_white" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Current Match"
+                    android:paddingTop="30dp"
+                    android:textColor="@color/logoColor"
+                    android:textSize="25dp" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Team 2"
+                    android:textSize="22dp"
+                    android:id="@+id/team1_CurrentMatch"
+                    android:paddingVertical="50dp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/black"
+                    android:textAllCaps="false"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/logoColor">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:id="@+id/teamsPlaying_Number2"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="20dp"
+                    android:paddingVertical="5dp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/black"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Players Playing"
+                    android:textSize="16dp"
+                    android:paddingLeft="5dp"
+                    android:paddingVertical="5dp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/black"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/playingPlayersList2">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/logoColor">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7"
+                    android:id="@+id/teamsSiting_Number2"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="20dp"
+                    android:paddingVertical="5dp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/black"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bench Players"
+                    android:textSize="16dp"
+                    android:paddingLeft="5dp"
+                    android:paddingVertical="5dp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/black"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/BenchPlayersList2">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

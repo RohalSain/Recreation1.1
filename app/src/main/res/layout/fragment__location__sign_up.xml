@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundColor"
+    tools:context="com.example.emilence.recreationcenter.Fragment_Location_SignUp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topLocationSignup"
+        android:background="@color/BackgroundColor"
+        >
+        <ImageButton
+            android:id="@+id/Back_SignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="60dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="30dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_left_arrow_white" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Select Location"
+            android:paddingTop="30dp"
+            android:textColor="@color/logoColor"
+            android:textSize="25dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:id="@+id/place_autocomplete_fragmentLayout"
+        android:layout_below="@+id/topLocationSignup">
+    <fragment
+        android:id="@+id/place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        />
+    </RelativeLayout>
+
+        <FrameLayout
+            android:layout_below="@+id/place_autocomplete_fragmentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frame_Home"
+            android:layout_marginBottom="40dp"
+
+            >
+            <com.google.android.gms.maps.MapView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mapSignUp"
+                />
+        </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/BackgroundColor">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:textColor="@android:color/white"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:id="@+id/doneLocationSignup"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+    </RelativeLayout>
+
+
+

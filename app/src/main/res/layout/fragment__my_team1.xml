@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/BackgroundColor"
+    android:id="@+id/FragmentMyTeam1"
+    tools:context=".Fragment_MyTeam1">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:paddingHorizontal="15dp"
+            android:weightSum="3"
+            android:id="@+id/top_MyTeam1">
+            <ImageButton
+                android:id="@+id/side_button_MyTeamsDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitStart"
+                android:paddingLeft="10dp"
+                android:src="@drawable/ic_arrow_left_white" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="My Team "
+                android:layout_marginBottom="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:paddingTop="10dp"
+                android:textColor="@color/logoColor"
+                android:textSize="18dp" />
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingRight="10dp"
+                android:scaleType="fitEnd"
+                android:id="@+id/notificationMy"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:background="@android:color/white"
+            android:id="@+id/panelTeam1"
+            android:layout_below="@+id/top_MyTeam1"
+
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team 1"
+                android:textSize="22dp"
+                android:id="@+id/team1_TeamDetails"
+                android:paddingVertical="50dp"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/black"
+                android:textAllCaps="false"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/playingText"
+            android:layout_below="@+id/panelTeam1"
+            android:background="@color/logoColor">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:id="@+id/teamsPlaying_Number"
+            android:textSize="16dp"
+            android:layout_marginLeft="20dp"
+            android:paddingVertical="5dp"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/black"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Players Playing"
+            android:textSize="16dp"
+            android:paddingLeft="5dp"
+            android:paddingVertical="5dp"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/black"
+            />
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@android:color/white"
+            android:layout_below="@+id/playingText"
+            android:id="@+id/listMyTeam1Playing">
+
+        </android.support.v7.widget.RecyclerView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/benchMyTeam1"
+            android:layout_below="@+id/listMyTeam1Playing"
+            android:background="@color/logoColor">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:id="@+id/teamsSiting_Number"
+                android:textSize="16dp"
+                android:layout_marginLeft="20dp"
+                android:paddingVertical="5dp"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/black"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bench Players"
+                android:textSize="16dp"
+                android:paddingLeft="5dp"
+                android:paddingVertical="5dp"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@android:color/white"
+            android:layout_below="@+id/benchMyTeam1"
+            android:id="@+id/listMyTeam1Bench">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/sidemenu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/sideColor"
+
+        >
+        <com.github.mmin18.widget.RealtimeBlurView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:realtimeBlurRadius="300dp"
+            app:realtimeOverlayColor="@color/BlurColor" />
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:paddingLeft="15dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/userPic_Side"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:scaleType="fitCenter"
+                fresco:placeholderImage="@drawable/profileplaceholder"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/BackgroundColor"
+                fresco:roundingBorderWidth="2dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="50dp">
+                <TextView
+                    android:id="@+id/name_Side"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    android:text="Mark Lee"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/top"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/Home_Side"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginVertical="15dp"
+                android:drawableLeft="@drawable/ic_home_orange"
+                android:drawablePadding="10dp"
+                android:paddingLeft="30dp"
+                android:text="Home"
+                android:textColor="@android:color/white" />
+            <View
+                android:id="@+id/v"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@id/Home_Side"
+                android:background="@color/viewColor2" />
+            <TextView
+                android:layout_below="@+id/v"
+                android:id="@+id/myTeam_Side"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginVertical="15dp"
+                android:drawableLeft="@drawable/ic_team_orange"
+                android:drawablePadding="10dp"
+                android:paddingLeft="30dp"
+                android:text="My Team"
+                android:textColor="@android:color/white" />
+            <View
+                android:id="@+id/v1"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@id/myTeam_Side"
+                android:background="@color/viewColor2" />
+            <TextView
+                android:id="@+id/teamTracks_Side"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/v1"
+                android:layout_marginVertical="15dp"
+                android:drawableLeft="@drawable/ic_teams_tracks_orange"
+                android:drawablePadding="10dp"
+                android:paddingLeft="30dp"
+                android:text="Team Tracks"
+                android:textColor="@android:color/white" />
+            <View
+                android:id="@+id/v2"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@id/teamTracks_Side"
+                android:background="@color/viewColor2" />
+            <TextView
+                android:id="@+id/settings_Side"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/v2"
+                android:layout_marginVertical="15dp"
+                android:drawableLeft="@drawable/ic_setting_orange"
+                android:drawablePadding="10dp"
+                android:paddingLeft="30dp"
+                android:text="Settings"
+                android:textColor="@android:color/white" />
+            <View
+                android:id="@+id/v3"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@id/settings_Side"
+                android:background="@color/viewColor2" />
+            <TextView
+                android:id="@+id/terms_Side"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/v3"
+                android:layout_marginVertical="15dp"
+                android:drawableLeft="@drawable/ic_terms_and_conditions_orange"
+                android:drawablePadding="10dp"
+                android:paddingLeft="30dp"
+                android:text="@string/terms"
+                android:textColor="@android:color/white" />
+            <View
+                android:id="@+id/v4"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@id/terms_Side"
+                android:background="@color/viewColor2" />
+            <TextView
+                android:id="@+id/logout_Side"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v4"
+                android:layout_marginVertical="15dp"
+                android:drawableLeft="@drawable/ic_logout_orange"
+                android:drawablePadding="10dp"
+                android:paddingBottom="40dp"
+                android:paddingLeft="30dp"
+                android:text="Logout"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

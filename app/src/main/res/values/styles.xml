@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+
+    </style>
+
+
+
+    <!-- Sliding animation -->
+
+    <!-- Grow animation -->
+    <style name="yourCustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/yourCustomDialogAnimation</item>
+    </style>
+
+    <style name="yourCustomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="customAnimations"></style>
+    <style name="customAnimationsgrow">
+        <item name="android:windowEnterAnimation">@anim/grow_out</item>
+        <item name="android:windowExitAnimation">@anim/groe_in</item>
+    </style>
+
+    <style name="customAnimationsslide">
+        <item name="android:windowEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+</resources>
